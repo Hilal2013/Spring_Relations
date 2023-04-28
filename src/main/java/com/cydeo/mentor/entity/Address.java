@@ -2,10 +2,7 @@ package com.cydeo.mentor.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
@@ -23,6 +20,8 @@ public class Address {
     private State state;
      */
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private State state;
     @Override
     public String toString() {
         return "Address{" +
