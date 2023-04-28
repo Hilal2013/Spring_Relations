@@ -5,8 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -22,6 +22,10 @@ public class Invoice_Product extends BaseEntity{
     private Invoice invoice;
     private Product product;
  */
+@OneToOne(fetch=FetchType.LAZY)
+private Invoice invoice;
+@OneToOne(fetch=FetchType.LAZY)
+    private Product product;
 
     @Override
     public String toString() {
