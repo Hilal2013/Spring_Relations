@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
 
@@ -23,7 +25,8 @@ public class Invoice extends BaseEntity{
 /*  This field will be used in STEP-3
     private Client client;
  */
-
+    @ManyToOne(fetch = FetchType.LAZY)
+private Client client;
     @Override
     public String toString() {
         return "Invoice{" +
