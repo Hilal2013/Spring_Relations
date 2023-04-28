@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,7 +15,7 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Table(name = "users")
-public class User extends BaseEntity{
+public class User extends BaseEntity {
 
     private String firstname;
     private String lastname;
@@ -23,6 +25,8 @@ public class User extends BaseEntity{
     /*  This field will be used in STEP-3
     private Role role;
      */
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Role role;
 
     @Override
     public String toString() {
