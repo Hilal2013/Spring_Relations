@@ -14,10 +14,8 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Category  {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Category extends BaseEntity {
+
     private String categoryName;
     private int tax;
 

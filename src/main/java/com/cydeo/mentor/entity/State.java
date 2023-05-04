@@ -14,11 +14,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Getter
 @Setter
-public class State {
-
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class State extends BaseEntity{
     private String stateCode;
     private String stateName;
 
