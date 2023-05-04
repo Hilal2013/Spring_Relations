@@ -19,8 +19,7 @@ public class Address {
     /*  This field will be used in STEP-3
     private State state;
      */
-    @OneToOne(fetch=FetchType.LAZY)
-private Client client;
+
     @ManyToOne(fetch = FetchType.LAZY)
     private State state;
     @Override

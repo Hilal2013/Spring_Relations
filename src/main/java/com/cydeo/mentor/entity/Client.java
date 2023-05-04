@@ -21,7 +21,7 @@ public class Client extends BaseEntity {
 /*  This field will be used in STEP-3
     private Address address;
  */
-@OneToOne(fetch =FetchType.LAZY)
+@ManyToOne(fetch = FetchType.LAZY)
 private Address address;
     @Override
     public String toString() {
