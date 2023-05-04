@@ -22,9 +22,9 @@ public class Invoice_Product extends BaseEntity{
     private Invoice invoice;
     private Product product;
  */
-@OneToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.LAZY)
 private Invoice invoice;
-@OneToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.LAZY)
     private Product product;
 
     @Override
